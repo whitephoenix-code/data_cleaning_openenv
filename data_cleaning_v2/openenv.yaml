@@ -1,0 +1,75 @@
+name: customer-records-cleaning-env
+version: "1.0.0"
+description: >
+  An OpenEnv-compliant RL environment where AI agents clean messy customer
+  records. Agents fix name casing, invalid emails, malformed phone numbers,
+  wrong date formats, inconsistent status values, and duplicate rows across
+  three tasks of increasing difficulty.
+author: participant
+tags:
+  - openenv
+  - data-cleaning
+  - real-world
+  - customer-records
+  - nlp
+
+entry_point: app:app
+port: 7860
+
+endpoints:
+  reset: "POST /reset"
+  step:  "POST /step"
+  state: "GET /state"
+
+tasks:
+  - id: task_1
+    name: "Customer Name & Status Cleaning"
+    difficulty: easy
+    max_steps: 20
+
+  - id: task_2
+    name: "Email, Phone & Date Format Cleaning"
+    difficulty: medium
+    max_steps: 40
+
+  - id: task_3
+    name: "Full Customer Records Pipeline"
+    difficulty: hard
+    max_steps: 80
+
+action_space:
+  type: object
+  actions:
+    - normalize_name
+    - normalize_email
+    - normalize_phone
+    - normalize_date
+    - normalize_status
+    - normalize_city
+    - fill_missing
+    - mark_duplicate
+    - mark_invalid
+    - submit
+
+observation_space:
+  type: object
+  fields:
+    - task_id
+    - task_name
+    - task_description
+    - dataset
+    - columns
+    - score
+    - schema_errors
+    - step_count
+    - max_steps
+    - done
+    - message
+
+reward:
+  type: float
+  range: [0.0, 1.0]
+  description: >
+    Weighted score: 50% field correctness vs ground truth,
+    25% schema validity, 25% duplicate removal.
+    Penalizes over-cleaning (-0.1) and invalid actions (-0.05).

@@ -1,0 +1,16 @@
+id,name,email,phone,date_of_birth,city,signup_date,status
+1,Rahul Sharma,rahul.sharma@gmail.com,9876543210,1990-05-15,Mumbai,2023-01-10,Active
+2,Priya Patel,priya.patel@yahoo.com,9876543211,1992-08-15,Ahmedabad,2023-03-15,Active
+3,Amit Singh,amit.singh@gmail.com,9123456789,1988-11-22,Delhi,2023-02-20,Active
+4,Sunita Verma,sunita.verma@outlook.com,9123456790,1995-07-22,Pune,2023-07-22,Inactive
+5,Kiran Reddy,kiran.reddy@gmail.com,9012345678,1993-03-30,Hyderabad,2023-04-05,Active
+6,Deepak Joshi,deepak.joshi@gmail.com,9012345679,1991-12-30,Bangalore,2022-12-30,Pending
+7,Meera Nair,meera.nair@gmail.com,8901234567,1987-07-14,Chennai,2023-05-18,Active
+8,Vikram Gupta,vikram.gupta@hotmail.com,8901234568,1996-04-14,Kolkata,2023-01-14,Active
+9,Ananya Das,ananya.das@gmail.com,7890123456,1994-09-08,Mumbai,2023-06-22,Inactive
+10,Rohit Mehta,rohit.mehta@gmail.com,7890123457,1989-02-08,Pune,2023-02-08,Active
+11,Nisha Kapoor,nisha.kapoor@gmail.com,6789012345,1991-12-25,Delhi,2023-07-30,Active
+12,Suresh Kumar,suresh.kumar@yahoo.com,6789012346,1993-06-25,Bangalore,2023-06-25,Pending
+13,Pooja Iyer,pooja.iyer@gmail.com,5678901234,1990-08-19,Chennai,2023-08-14,Active
+14,Arjun Malhotra,arjun.malhotra@gmail.com,5678901235,1992-10-19,Hyderabad,2022-10-19,Active
+15,Kavita Bose,kavita.bose@gmail.com,4567890123,1988-03-07,Kolkata,2023-09-01,Active
