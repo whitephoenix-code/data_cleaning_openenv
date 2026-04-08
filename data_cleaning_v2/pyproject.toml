@@ -1,20 +1,25 @@
 [project]
 name = "data-cleaning-env"
 version = "1.0.0"
+description = "Customer Records Cleaning OpenEnv"
+authors = [
+    { name = "tecsom" }
+]
+readme = "README.md"
 requires-python = ">=3.11"
+
 dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "requests",
     "openenv-core>=0.2.0",
-    "fastapi==0.115.0",
-    "uvicorn[standard]==0.30.6",
-    "pydantic==2.7.4",
     "openai>=1.35.0",
-    "requests>=2.31.0",
     "pyyaml>=6.0.1",
 ]
 
 [project.scripts]
 server = "main:app"
 
-[build-system]
-requires = ["setuptools>=61"]
-build-backend = "setuptools.backends.legacy:BuildBackend"
+[tool.setuptools]
+packages = ["env", "app"]
